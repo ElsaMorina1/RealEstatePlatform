@@ -1,0 +1,38 @@
+﻿@model RealEstatePlatform.Models.Property
+
+<div class="container mt-5">
+
+    <div class="card shadow p-4">
+
+        <h2 class="text-danger">
+            Delete Property
+        </h2>
+
+        <h4>
+            @Model.Title
+        </h4>
+
+        <p>
+            @Model.Price €
+        </p>
+
+        <form method="post">
+
+            <input type="hidden"
+                   asp-for="Id" />
+
+            <button class="btn btn-danger">
+                Delete
+            </button>
+
+            <a asp-action="Index"
+               class="btn btn-secondary">
+                Cancel
+            </a>
+
+        </form>
+
+    </div>
+
+</div>
+

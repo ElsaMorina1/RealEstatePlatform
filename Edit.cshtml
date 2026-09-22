@@ -1,0 +1,51 @@
+﻿@model RealEstatePlatform.Models.Property
+
+<div class="container mt-5">
+
+    <div class="card shadow p-4">
+
+        <h2>Edit Property</h2>
+
+        <form method="post">
+
+            <input type="hidden"
+                   asp-for="Id" />
+
+            <div class="mb-3">
+                <label>Title</label>
+
+                <input asp-for="Title"
+                       class="form-control" />
+            </div>
+
+            <div class="mb-3">
+                <label>Description</label>
+
+                <textarea asp-for="Description"
+                          class="form-control"></textarea>
+            </div>
+
+            <div class="mb-3">
+                <label>Price</label>
+
+                <input asp-for="Price"
+                       class="form-control" />
+            </div>
+
+            <div class="mb-3">
+                <label>Image Url</label>
+
+                <input asp-for="ImageUrl"
+                       class="form-control" />
+            </div>
+
+            <button class="btn btn-primary">
+                Update
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+

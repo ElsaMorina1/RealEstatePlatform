@@ -1,0 +1,76 @@
+﻿@model IEnumerable<RealEstatePlatform.Models.Property>
+<div class="container mt-5">
+	<div class="d-flex justify-content-between mb-4"> 
+		<h2>Properties</h2>
+		@if (User.IsInRole("Admin")) 
+		{ <a asp-action="Create" class="btn btn-primary">
+			Add Property </a> }
+			</div> 
+			<form asp-action="Property2" method="get" class="mb-5">
+				
+					
+					<div class="mb-4">
+						<select name="Category"
+						class="form-select filter-box">
+						<option value="">Categorie</option>
+						<option value="Apartment" selected="@(ViewBag.Category == "Apartment")">Apartment</option> 
+						<option value="House" selected="@(ViewBag.Category == "House")">House</option> 
+						<option value="Land" selected="@(ViewBag.Category == "Land")">Land</option>
+						<option value="Local" selected="@(ViewBag.Category == "Local")">Local</option>
+						<option value="Cafe" selected="@(ViewBag.Category == "Cafe")">Cafe</option>
+						<option value="Hotel" selected="@(ViewBag.Category == "Hotel")">Hotel</option>
+						<option value="Restorant" selected="@(ViewBag.Category == "Restorant")">Restorant</option>
+
+						</select>
+						</div> 
+						
+						<div class="row g-3 align-items-center mb-4"> 
+							<div class="col-md-3">
+								<select name="City" 
+								class="form-select filter-box">
+                           <option value="">City</option>
+                 <option value="Drenas" selected="@(ViewBag.City == "Drenas")">Drenas</option>
+				 <option value="Prishtinë" selected="@(ViewBag.City == "Prishtinë")">Prishtinë</option>
+				 <option value="Prizren" selected="@(ViewBag.City == "Prizren")">Prizren</option>
+				 <option value="Pejë" selected="@(ViewBag.City == "Pejë")">Pejë</option> 
+				 <option value="Ferizaj" selected="@(ViewBag.City == "Ferizaj")">Ferizaj</option> 
+				 <option value="Gjilan" selected="@(ViewBag.City == "Gjilan")">Gjilan</option> 
+				 <option value="Mitrovicë" selected="@(ViewBag.City == "Mitrovicë")">Mitrovicë</option>
+				 <option value="Gjakovë" selected="@(ViewBag.City == "Gjakovë")">Gjakovë</option> 
+				 <option value="Fushë Kosovë" selected="@(ViewBag.City == "Fushë Kosovë")">Fushë Kosovë</option>
+				 <option value="Podujevë" selected="@(ViewBag.City == "Podujevë")">Podujevë</option>
+			 </select> </div>
+			 
+			 <div class="col-md-3">
+				 <input type="number"
+					 name="minPrice"
+					 value="@ViewBag.MinPrice" 
+					 class="form-control filter-box"
+					 placeholder="Min Price" /> 
+				 </div>
+				 
+				 
+				 <div class="col-md-3">
+					 <input type="number"
+						 name="maxPrice" 
+						 value="@ViewBag.MaxPrice" 
+						 class="form-control filter-box"
+						 placeholder="Max Price" /> 
+					 </div>
+					 <div class="col-md-3">
+						 <button type="submit" 
+							 class="btn filter-btn w-100" 
+							 style="background-color: #0ea5e9 !important; 
+                                     color: white !important;
+                                     height: 48px; 
+                                     border-radius:8px;
+                                     border: none;
+                                     font-weight: 600;
+                                     font-size: 17px;">
+
+							 Filter
+						 </button>
+</div>
+</div>
+</form> 
+</div>

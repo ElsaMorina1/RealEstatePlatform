@@ -1,0 +1,79 @@
+﻿@model RealEstatePlatform.ViewModels.PropertyFilterViewModel
+
+<h2>
+
+	Search Results
+
+</h2>
+
+@if (Model.Properties.Count == 0)
+{
+	<div class="alert alert-danger">
+
+		No properties found.
+
+	</div>
+}
+
+else
+{
+
+	<div class="row">
+
+		@foreach (var item in Model.Properties)
+		{
+
+			<div class="col-md-4 mb-4">
+
+				<div class="card">
+
+					<img src="@item.ImageUrl"
+						 class="card-img-top">
+
+					<div class="card-body">
+
+						<h5>
+
+							@item.Title
+
+						</h5>
+
+						<p>
+
+							📍 @item.City
+
+						</p>
+
+						<h4>
+
+							€@item.Price
+
+						</h4>
+
+						<a asp-action="Details"
+						   asp-route-id="@item.Id"
+						   class="btn btn-primary">
+
+							Details
+
+						</a>
+
+						<a asp-action="AddFavorite"
+						   asp-route-id="@item.Id"
+						   class="btn btn-danger">
+
+							❤ Favorite
+
+						</a>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		}
+
+	</div>
+
+}

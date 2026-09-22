@@ -1,0 +1,57 @@
+﻿@model RealEstatePlatform.Models.Property
+
+<div class="container mt-5">
+
+    <div class="card shadow p-4">
+
+        <h2>Create Property</h2>
+
+        <form method="post">
+
+            <div class="mb-3">
+                <label>Title</label>
+
+                <input asp-for="Title"
+                       class="form-control" />
+
+                <span asp-validation-for="Title"
+                      class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label>Description</label>
+
+                <textarea asp-for="Description"
+                          class="form-control"></textarea>
+
+                <span asp-validation-for="Description"
+                      class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label>Price</label>
+
+                <input asp-for="Price"
+                       class="form-control" />
+
+                <span asp-validation-for="Price"
+                      class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label>Image Url</label>
+
+                <input asp-for="ImageUrl"
+                       class="form-control" />
+            </div>
+
+            <button class="btn btn-success">
+                Save
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+

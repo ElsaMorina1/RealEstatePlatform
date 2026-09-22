@@ -1,0 +1,484 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins',sans-serif;
+    background: #f4f7fb;
+    overflow-x: hidden;
+}
+
+
+
+.navbar {
+    background: #0f172a !important;
+    padding: 18px 0;
+}
+
+.navbar-brand {
+    font-size: 28px;
+    font-weight: 700;
+    color: white !important;
+}
+
+.nav-link {
+    color: white !important;
+    margin-left: 15px;
+    transition: 0.3s;
+}
+
+    .nav-link:hover {
+        color: #38bdf8 !important;
+    }
+
+
+
+.hero-section {
+    height: 90vh;
+    background: linear-gradient( rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/images/hero.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-content h1 {
+    font-size: 70px;
+    font-weight: 700;
+}
+
+.hero-content p {
+    font-size: 22px;
+    margin-top: 20px;
+}
+
+.hero-btn {
+    margin-top: 30px;
+    padding: 15px 40px;
+    border: none;
+    background: #0ea5e9;
+    color: white;
+    border-radius: 10px;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+    .hero-btn:hover {
+        background: #0284c7;
+        color: white;
+        transform: translateY(-5px);
+    }
+
+
+
+.property-card {
+    border: none;
+    border-radius: 20px;
+    overflow: hidden;
+    background: white;
+    transition: 0.4s;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+    .property-card:hover {
+        transform: translateY(-10px);
+    }
+
+    .property-card img {
+        height: 250px;
+        width: 100%;
+        object-fit: cover;
+        transition: 0.4s;
+    }
+
+    .property-card:hover img {
+        transform: scale(1.05);
+    }
+
+    .property-card .card-body {
+        padding: 20px;
+    }
+
+.property-price {
+    color: #0ea5e9;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.property-btn {
+    width: 100%;
+    border: none;
+    background: #0f172a;
+    color: white;
+    padding: 12px;
+    border-radius: 10px;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+    .property-btn:hover {
+        background: #0ea5e9;
+        color: white;
+    }
+
+
+.property-card {
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    height: 420px;
+    border-radius: 15px;
+    background: white;
+}
+
+.property-image {
+    width: 100%;
+    transition: .5s;
+}
+
+    .property-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+.property-info {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    width: calc(100% - 40px);
+    transition: .5s;
+}
+
+.detailsPanel {
+    position: absolute;
+    top: 0;
+    right: -320px;
+    width: 320px;
+    height: 100%;
+    background: white;
+    overflow-y: auto;
+    padding: 20px;
+    transition: .5s;
+    border-left: 1px solid #ddd;
+}
+
+.property-card.active .property-image {
+    width: calc(100% - 320px);
+}
+
+.property-card.active .detailsPanel {
+    right: 0;
+}
+
+.property-card.active .detailsBtn {
+    display: none;
+}
+
+.property-details-image {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+
+
+.auth-section {
+    min-height: 100vh;
+    background: linear-gradient( rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/images/login-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.auth-card {
+    width: 450px;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    padding: 40px;
+    color: white;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+}
+
+    .auth-card input {
+        height: 50px;
+        border-radius: 10px;
+    }
+
+.auth-btn {
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    background: #0ea5e9;
+    color: white;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+    .auth-btn:hover {
+        background: #0284c7;
+    }
+
+
+
+.table {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+
+
+.btn {
+    transition: 0.3s;
+}
+
+    .btn:hover {
+        transform: translateY(-3px);
+    }
+
+.search-box {
+    height: 52px;
+    border: 2px solid #9ec9ff;
+    border-radius: 8px;
+    box-shadow: none;
+    transition: .3s;
+}
+
+    .search-box:focus {
+        border-color: #4da3ff;
+        box-shadow: 0 0 0 0.2rem rgba(13,110,253,.15);
+    }
+
+.category-box {
+    height: 52px;
+    border: 1px solid #d9d9d9;
+    border-radius: 8px;
+}
+
+    .category-box:focus {
+        border-color: #4da3ff;
+        box-shadow: 0 0 0 0.2rem rgba(13,110,253,.15);
+    }
+
+.filter-box {
+    height: 48px;
+    border: 1px solid #0ea5e9;
+    border-radius: 8px;
+}
+
+    .filter-box:focus {
+        border-color: #0ea5e9;
+        box-shadow: 0 0 0 0.2rem rgba(13,110,253,.15);
+    }
+
+.filter-btn {
+    height: 48px;
+    width: 100%;
+    border: none ;
+    border-radius: 8px;
+    background-color: #0ea5e9 ;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 17px;
+    transition: background-color 0.3s ease;
+}
+
+    .filter-btn:hover {
+        background-color: #0284c7 ;
+        color: #ffffff ;
+    }
+
+
+
+.dashboard-card {
+    border-radius: 20px;
+    padding: 30px;
+    color: white;
+    transition: 0.4s;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+    .dashboard-card:hover {
+        transform: translateY(-10px);
+    }
+
+.bg-blue {
+    background: linear-gradient( 45deg, #0ea5e9, #2563eb);
+}
+
+.bg-green {
+    background: linear-gradient( 45deg, #10b981, #059669);
+}
+
+.bg-orange {
+    background: linear-gradient( 45deg, #f59e0b, #d97706);
+}
+
+.dashboard-container {
+    min-height: 88vh;
+    background-color: #f8f9fa;
+}
+
+.sidebar {
+    width: 260px;
+    background-color: #ffffff;
+    border-right: 1px solid #e9ecef;
+}
+
+    .sidebar .nav-link {
+        color: #6c757d;
+        font-weight: 500;
+        padding: 10px 15px;
+        border-radius: 10px;
+        transition: all 0.2s ease;
+    }
+
+        .sidebar .nav-link:hover, .sidebar .nav-link.active {
+            background-color: #0d6efd;
+            color: #ffffff !important;
+        }
+
+.stat-card {
+    border: 1px solid #f0f0f0;
+    transition: transform 0.2s ease;
+}
+
+    .stat-card:hover {
+        transform: translateY(-3px);
+    }
+
+.stat-icon {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+.contact-card {
+    border: none;
+    border-radius: 20px;
+}
+
+
+
+.footer {
+    background: #0f172a;
+    color: white;
+    padding: 60px 0;
+    margin-top: 80px;
+}
+
+
+
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.spinner {
+    width: 60px;
+    height: 60px;
+    border: 8px solid #ddd;
+    border-top: 8px solid #0ea5e9;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+.dark-mode {
+    background: #0f172a;
+    color: white;
+}
+
+    .dark-mode .navbar {
+        background: #020617 !important;
+    }
+
+    .dark-mode .footer {
+        background: #020617;
+    }
+
+    .dark-mode .card {
+        background: #1e293b;
+        color: white;
+    }
+
+    .dark-mode .table {
+        background: #1e293b;
+        color: white;
+    }
+
+    .dark-mode input,
+    .dark-mode textarea,
+    .dark-mode select {
+        background: #334155;
+        color: white;
+        border: 1px solid #475569;
+    }
+
+    .dark-mode .property-card {
+        background: #1e293b;
+    }
+
+    .dark-mode .auth-card {
+        background: rgba(15,23,42,0.8);
+    }
+
+
+
+
+@media(max-width:768px) {
+
+    .hero-content h1 {
+        font-size: 40px;
+    }
+
+    .hero-content p {
+        font-size: 18px;
+    }
+
+    .auth-card {
+        width: 95%;
+    }
+
+    .property-details-image {
+        height: 300px;
+    }
+
+    .navbar-brand {
+        font-size: 22px;
+    }
+}

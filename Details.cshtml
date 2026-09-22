@@ -1,0 +1,93 @@
+﻿@model RealEstatePlatform.Models.Property
+
+<div class="container my-5">
+
+    <div class="card shadow-lg border-0">
+
+  
+
+        <img src="@Model.ImageUrl"
+             class="img-fluid rounded">
+
+        <div class="card-body p-5">
+
+            <h1>
+                @Model.Title
+            </h1>
+
+            <h3 class="text-primary">
+
+                €@Model.Price
+
+            </h3>
+
+            <p class="mt-4">
+
+                @Model.Description
+
+            </p>
+
+            <div class="row mt-5">
+
+                <div class="col-md-3">
+
+                    <h5>Bedrooms</h5>
+
+                    <p>@Model.Bedrooms</p>
+
+                </div>
+
+                <div class="col-md-3">
+
+                    <h5>Bathrooms</h5>
+
+                    <p>@Model.Bathrooms</p>
+
+                </div>
+
+                <div class="col-md-3">
+
+                    <h5>Area</h5>
+
+                    <p>@Model.Area m²</p>
+
+                </div>
+
+                <div class="col-md-3">
+
+                    <h5>City</h5>
+
+                    <p>@Model.City</p>
+
+                </div>
+
+            </div>
+
+        </div>
+        <form method="post" asp-action="AddComment">
+
+            <input type="hidden" name="propertyId" value="@Model.Id" />
+
+            <textarea name="text" class="form-control"
+                      placeholder="Write comment..."></textarea>
+
+            <button class="btn btn-primary mt-2">
+
+                Add Comment
+
+            </button>
+
+        </form>
+        <iframe width="100%"
+                height="300"
+                style="border:0"
+                loading="lazy"
+                allowfullscreen
+                src="https://www.google.com/maps?q=@Model.City&output=embed">
+        </iframe>
+
+    </div>
+
+</div>
+
+
